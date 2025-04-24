@@ -55,6 +55,13 @@ public class OrderManagement {
         }
     }
 
+    public void completeOrder(Order order) {
+        if (order != null) {
+            order.setOrderStatus("Completed");
+            System.out.println("Order " + order.getOrderId() + " completed.");
+        }
+    }
+
     public List<Order> getAllActiveOrders() {
         return new ArrayList<>(activeOrders); // Return a copy to prevent external modification
     }
